@@ -12,7 +12,8 @@
   This demonstration is very similar to the scalaLogs one, except instead of starting with a json file of alot of data, I start with a massive CSV file from Open Payments, has been a federal program that collects information about payments drug and device companies make to physicians and teaching hospitals for things like travel, research, gifts, speaking fees, and meals.
    
    Using the lines:
+     '''scala
      ds.filter($"amount" > 9000).show()
      ds.groupBy("Nature_of_payment").count().orderBy(desc("count")).show()
    the resulting table shows payments that were made that were above $9000, grouped by the nature of the payments.
-
+     '''
