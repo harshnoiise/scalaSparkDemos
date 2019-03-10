@@ -9,6 +9,9 @@
       ds.filter($"transaction_amount" > 1000).show()
       ds.filter(ds("successful_transaction")==="true").show()
   ```
+  
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/scalaLogsTable.png)
+
   the resulting table shows transactions that cost more than $1000. and that were true for being successfully completed.
   
 # healthCareScala
@@ -20,5 +23,7 @@
   ds.filter($"amount" > 9000).show()
   ds.groupBy("Nature_of_payment").count().orderBy(desc("count")).show()
   ```
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/healthCareScalaTable.png)
+
   the resulting table shows payments that were made that were above $9000, grouped by the nature of the payments.
      
