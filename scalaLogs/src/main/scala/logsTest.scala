@@ -37,7 +37,5 @@ object logsTest {
     ds.filter($"transaction_amount" > 1000).show()
     ds.filter(ds("successful_transaction")==="true").show()
 
-
-
   }
 }
