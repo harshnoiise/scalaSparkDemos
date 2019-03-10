@@ -13,9 +13,9 @@
    
   Using the lines:
    
-     ```scala
-     ds.filter($"amount" > 9000).show()
-     ds.groupBy("Nature_of_payment").count().orderBy(desc("count")).show()
-     ```
+  ```scala
+  ds.filter($"amount" > 9000).show()
+  ds.groupBy("Nature_of_payment").count().orderBy(desc("count")).show()
+  ```
   the resulting table shows payments that were made that were above $9000, grouped by the nature of the payments.
      
