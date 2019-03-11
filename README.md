@@ -25,20 +25,13 @@
   ```
   ### The resulting table shows payments that were made that were above $9000, grouped by the nature of the payments:
   ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/healthCareScalaTable.png)
-
-  ### Filter to show what are the Nature of Payments that cost more than $1000 with count:
-  ```scala
-  ds.filter($"amount" > 1000).groupBy("Nature_of_payment")
-    .count().orderBy(desc("count")).show()
-  ```
-  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/natureOfPayment.png)
   
   ### Grouping by to show the top 5 Nature of Payments by count: 
   ```scala
   ds.groupBy("Nature_of_payment").count()
     .orderBy("count)).show(5)
   ```
-  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/five.png)
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/top_five.png)
   
 # scalaCount
   A simple word count implementation using The Complete Works of William Shakespeare as input.
