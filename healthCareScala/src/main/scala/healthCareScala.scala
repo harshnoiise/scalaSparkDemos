@@ -11,14 +11,6 @@ object healthCareScala {
 
   case class Payment(physician_id: String, date_payment: String, record_id: String, payer: String, amount: Double, physician_specialty: String, nature_of_payment: String) extends Serializable
 
-  case class PaymentwId(_id: String, physician_id: String, date_payment: String, payer: String, amount: Double, physician_specialty: String,
-                        nature_of_payment: String) extends Serializable
-
-  def createPaymentwId(p: Payment): PaymentwId = {
-    val id = p.physician_id + '_' + p.date_payment + '_' + p.record_id
-    PaymentwId(id, p.physician_id, p.date_payment, p.payer, p.amount, p.physician_specialty, p.nature_of_payment)
-  }
-
   def main(args: Array[String]) {
 
     val spark: SparkSession = SparkSession.builder().appName("payment").config("spark.master", "local").getOrCreate();

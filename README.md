@@ -27,3 +27,13 @@
 
   the resulting table shows payments that were made that were above $9000, grouped by the nature of the payments.
      
+# scalaCount
+  A simple word count implementation using The Complete Works of William Shakespeare as input.
+  
+  Here we are essentially tokenizing each word in a line to an array of strings in the file by spliting on the space in   between each word using flatMap, and then using reduceByKey, resulting in a tuple with a word and total word count.
+ ```scala
+ val counts = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+ ```
+ ```
+ scala> Total number of words: 76389
+ ```
