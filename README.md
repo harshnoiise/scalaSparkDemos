@@ -9,10 +9,10 @@
       ds.filter($"transaction_amount" > 1000).show()
       ds.filter(ds("successful_transaction")==="true").show()
   ```
-  
+  ### The resulting table shows transactions that cost more than $1000. and that were true for being successfully completed:
   ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/scalaLogsTable.png)
 
-  the resulting table shows transactions that cost more than $1000. and that were true for being successfully completed.
+  
   
 # healthCareScala
   This demonstration is very similar to the scalaLogs one, except instead of starting with a json file of alot of data, I start with a massive CSV file from Open Payments, has been a federal program that collects information about payments drug and device companies make to physicians and teaching hospitals for things like travel, research, gifts, speaking fees, and meals.
@@ -23,10 +23,15 @@
   ds.filter($"amount" > 9000).show()
   ds.groupBy("Nature_of_payment").count().orderBy(desc("count")).show()
   ```
+  ### The resulting table shows payments that were made that were above $9000, grouped by the nature of the payments:
   ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/healthCareScalaTable.png)
 
-  the resulting table shows payments that were made that were above $9000, grouped by the nature of the payments.
-     
+  ### Filter to show what are the Nature of Payments that cost more than $1000 with count:
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/natureOfPayment.png)
+  
+  ### Grouping by to show the top 5 Nature of Payments by count: 
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/five.png)
+  
 # scalaCount
   A simple word count implementation using The Complete Works of William Shakespeare as input.
   
