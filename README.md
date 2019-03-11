@@ -15,7 +15,7 @@
   
   
 # healthCareScala
-  This demonstration is very similar to the scalaLogs one, except instead of starting with a json file of alot of data, I start with a massive CSV file from Open Payments, has been a federal program that collects information about payments drug and device companies make to physicians and teaching hospitals for things like travel, research, gifts, speaking fees, and meals.
+  This demonstration is very similar to the scalaLogs one, except instead of starting with a json file of alot of data, I start with a massive CSV file from Open Payments, has been a federal program that collects information about payments drug and device companies make to physicians and teaching hospitals for things like travel, research, gifts, speaking fees, and meals. The dataset is about 7gb~. 
    
   Using the lines:
    
