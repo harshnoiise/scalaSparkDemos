@@ -35,5 +35,5 @@
  val counts = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
  ```
  ```
- Total number of words: 76389
+ scala> Total number of words: 76389
  ```
