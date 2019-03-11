@@ -31,7 +31,7 @@
   ds.groupBy("Nature_of_payment").count()
     .orderBy("count)).show(5)
   ```
-  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/top_five.png)
+  ![alt text](https://github.com/harshnoiise/scalaSparkDemos/blob/master/top_5.png)
   
 # scalaCount
   A simple word count implementation using The Complete Works of William Shakespeare as input.
